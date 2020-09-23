@@ -7,7 +7,7 @@ def starts_with_a_vowel?(word)
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-  text.match(/un\w+ing/i)
+  text.scan(/un\w+ing/i)
 end
 
 def words_five_letters_long(words_string)
@@ -19,7 +19,7 @@ def words_five_letters_long(words_string)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  if text.match(/^[A-Z]/) && text.match(/$[.,?!]/)
+  if text.match(/)
     return true 
   else
     return false
